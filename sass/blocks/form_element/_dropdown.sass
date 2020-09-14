@@ -1,14 +1,15 @@
-.select.is-active .select__body 
-    opacity: 1
-    visibility: visible
-.select.is-active .select__header
-    border-bottom-color: transparent
-    border-bottom-left-radius: 0
-    border-bottom-right-radius: 0
 .select
     position: relative
     width: 100%
     max-width: 320px
+    &.is-active
+        & .select__body
+            opacity: 1
+            visibility: visible
+        & .select__header
+            border-bottom-color: transparent
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
     &__header
         display: flex
         justify-content: space-between
