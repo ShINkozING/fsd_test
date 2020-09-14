@@ -440,6 +440,8 @@
   padding-left: 15px;
   font-size: 14px;
   line-height: 18px;
+  -webkit-transition: border-color .3s;
+  transition: border-color .3s;
 }
 
 .text-field label input:active {
@@ -452,73 +454,31 @@
 
 .text-field label input:focus {
   border: 1px solid rgba(31, 32, 65, 0.5);
+  outline: none;
 }
 
-.text-field__default {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0;
-}
-
-.text-field__default__input {
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
-  width: 100%;
-  height: 44px;
-  padding-left: 15px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.text-field__hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0;
-}
-
-.text-field__hover__input {
-  background: #FFFFFF;
+.text-field label input.hover {
   border: 1px solid rgba(31, 32, 65, 0.5);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
-  width: 100%;
-  height: 44px;
-  padding-left: 15px;
-  color: rgba(31, 32, 65, 0.75);
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
 }
 
-.select {
+.dropdown {
   position: relative;
   width: 100%;
   max-width: 320px;
 }
 
-.select.is-active .select__body {
+.dropdown.is-active .dropdown__body {
   opacity: 1;
   visibility: visible;
 }
 
-.select.is-active .select__header {
+.dropdown.is-active .dropdown__header {
   border-bottom-color: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.select__header {
+.dropdown__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -537,7 +497,7 @@
   transition: border-color .3s;
 }
 
-.select__header__icon {
+.dropdown__header__icon {
   content: "";
   width: 8px;
   height: 8px;
@@ -548,7 +508,7 @@
   margin-right: 10px;
 }
 
-.select__body {
+.dropdown__body {
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -570,8 +530,9 @@
   margin-top: -1px;
 }
 
-.select__body__item {
-  padding: 8px;
+.dropdown__body__item {
+  padding-left: 14px;
+  padding-right: 7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,6 +546,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+.dropdown__body__item span {
+  color: #1F2041;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .buttons {
@@ -598,15 +569,60 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-bottom: 13px;
+  margin-left: 13px;
+  margin-top: 20px;
 }
 
-.counter {
+.buttons button {
+  padding: 0;
+  margin-right: 7px;
+  max-height: 15px;
+  text-transform: uppercase;
+}
+
+.counters-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-height: 30px;
+}
+
+.counters-wrapper__button {
+  font-size: 18px;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.5);
+  line-height: 22px;
+  font-family: Montserrat;
+  margin-left: 2px;
+}
+
+.counters-wrapper__input {
+  margin: 0 5px;
+  border: none;
+  width: 100%;
+  max-width: 23px;
+  color: #1F2041;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 6px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+.counters-wrapper__input:focus {
+  outline: none;
 }
 
 @font-face {
@@ -732,6 +748,10 @@ a:hover {
   line-height: 18px;
 }
 
+input, select, textarea, button {
+  font-family: Montserrat;
+}
+
 .top-login button:last-of-type {
   font-weight: bold;
   font-size: 12px;
@@ -779,14 +799,40 @@ a:hover {
   z-index: -1;
 }
 
-.text_button {
+.text_button, .buttons button {
   position: relative;
   font-family: 'Montserrat', sans-serif;
-  color: rgba(31, 32, 65, 0.5);
+  color: #BC9CFF;
   font-size: 12px;
   line-height: 17px;
   background: #FFFFFF;
   border: none;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  font-weight: bold;
+}
+
+.text_button:hover, .buttons button:hover {
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.counters-wrapper__button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-transition: border-color .3s, color .3s;
+  transition: border-color .3s, color .3s;
+}
+
+.counters-wrapper__button:focus {
+  outline: none;
+}
+
+.counters-wrapper__button:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .wrap {

@@ -38,11 +38,15 @@
 %textButton
     position: relative
     font-family: 'Montserrat', sans-serif
-    color: rgba(31, 32, 65, 0.5)
+    color: #BC9CFF
     font-size: 12px
     line-height: 17px
     background: #FFFFFF
     border: none
+    transition: color .3s
+    font-weight: bold
+    &:hover
+        color: rgba(31, 32, 65, 0.5)
 %acceptButton
     font-weight: bold
     font-size: 22px
@@ -50,7 +54,6 @@
 %textField
     background: #FFFFFF
     border: 1px solid rgba(31, 32, 65, 0.25)
-    box-sizing: border-box
     border-radius: 4px
     width: 100%
     max-width: 320px
@@ -59,3 +62,15 @@
         border: 1px solid rgba(31, 32, 65, 0.5)
     &:focus
         border: 1px solid rgba(31, 32, 65, 0.5)
+%roundButton
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background: #ffffff
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    transition: border-color .3s, color .3s
+    &:focus
+        outline: none
+    &:hover
+        border: 1px solid rgba(31, 32, 65, 0.5)
+        color: rgba(31, 32, 65, 0.75)

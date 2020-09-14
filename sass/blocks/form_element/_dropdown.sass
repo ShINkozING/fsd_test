@@ -1,12 +1,12 @@
-.select
+.dropdown
     position: relative
     width: 100%
     max-width: 320px
     &.is-active
-        & .select__body
+        & .dropdown__body
             opacity: 1
             visibility: visible
-        & .select__header
+        & .dropdown__header
             border-bottom-color: transparent
             border-bottom-left-radius: 0
             border-bottom-right-radius: 0
@@ -46,18 +46,58 @@
         flex-direction: column
         margin-top: -1px
         &__item
-            padding: 8px
+            padding-left: 14px
+            padding-right: 7px
             display: flex
             justify-content: space-between
             align-items: center
             flex-direction: row
+            margin-bottom: 7px
+            margin-top: 5px
+            & span
+                color: #1F2041
+                font-size: 12px
+                line-height: 15px
+                font-weight: bold
+                text-transform: uppercase
 .buttons 
     display: flex
     flex-direction: row
     justify-content: space-between
-    margin-bottom: 5px
-    margin-left: 5px
-    margin-right: 5px
-
-.counter 
+    margin-bottom: 13px
+    margin-left: 13px
+    margin-top: 20px
+    & button
+        @extend  %textButton
+        padding: 0
+        margin-right: 7px
+        max-height: 15px
+        text-transform: uppercase
+.counters-wrapper
     display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    max-height: 30px
+    &__button
+        @extend %roundButton
+        font-size: 18px
+        text-align: center
+        color: rgba(31, 32, 65, 0.5)
+        line-height: 22px
+        font-family: Montserrat
+        margin-left: 2px
+    &__input
+        margin: 0 5px
+        border: none
+        width: 100%
+        max-width: 23px
+        color: #1F2041
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        padding-left: 6px
+        padding-bottom: 2px
+        text-align: center
+        &:focus
+            outline: none
