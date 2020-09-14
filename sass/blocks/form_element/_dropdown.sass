@@ -1,0 +1,62 @@
+.select.is-active .select__body 
+    opacity: 1
+    visibility: visible
+.select.is-active .select__header
+    border-bottom-color: transparent
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+.select
+    position: relative
+    width: 100%
+    max-width: 320px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 44px
+        background: #FFFFFF
+        border: 1px solid rgba(31, 32, 65, 0.25)
+        padding-left: 15px
+        border-radius: 4px
+        transition: border-color .3s
+        &__icon
+            content: ""
+            width: 8px
+            height: 8px
+            border-left: 2px solid rgba(31, 32, 65, 0.5)
+            border-bottom: 2px solid rgba(31, 32, 65, 0.5)
+            -webkit-transform: rotate(-45deg)
+            transform: rotate(-45deg)
+            margin-right: 10px
+    &__body
+        background: #FFFFFF
+        border: 1px solid rgba(31, 32, 65, 0.25)
+        border-radius: 4px
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+        display: block
+        visibility: hidden
+        opacity: 0
+        transition: opacity .3s, visibility .3s, border-color .3s
+        left: 0
+        position: absolute
+        right: 0
+        top: 100%
+        flex-direction: column
+        margin-top: -1px
+        &__item
+            padding: 8px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-direction: row
+.buttons 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 5px
+    margin-left: 5px
+    margin-right: 5px
+
+.counter 
+    display: flex

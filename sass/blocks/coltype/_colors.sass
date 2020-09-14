@@ -1,0 +1,28 @@
+.colors
+    display: flex
+    flex-direction: column
+    &__item
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        &-block
+            flex-shrink: 0
+            width: 70px
+            height: 70px
+            border-radius: 6px
+            background: #1F2041
+            margin-right: 40px
+        &-text 
+            font-size: 19px
+        &:nth-of-type(2) .colors__item-block         
+            background: rgba(31, 32, 65, 0.75)            
+        &:nth-of-type(3) .colors__item-block            
+            background: rgba(31, 32, 65, 0.5)            
+        &:nth-of-type(4) .colors__item-block
+            background: rgba(31, 32, 65, 0.25)
+        &:nth-of-type(5) .colors__item-block
+            background: rgba(31, 32, 65, 0.05)
+        &:nth-of-type(6) .colors__item-block
+            background: #BC9CFF
+        &:nth-of-type(7) .colors__item-block
+            background: #6FCF97

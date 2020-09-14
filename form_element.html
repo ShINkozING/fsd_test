@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="sass/main.css">
+    </head>
+    <body>
+        <section class="FormElement">
+            <div class="wrap">
+                <div class="FormElement-content">
+                    <div class="text-field">
+                        <div class="text-field__text">
+                            <h3>text field</h3>
+                            <p>default</p>
+                        </div>
+                        <div class="text-field__default">
+                            <input placeholder="Email" class="text-field__default__input">
+                        </div>
+                    </div>
+                    <div class="text-field">
+                        <div class="text-field__text">
+                            <h3>text field</h3>
+                            <p>hover / focus</p>
+                        </div>
+                        <div class="text-field__hover">
+                            <input value="This is pretty awesome" class="text-field__hover__input">
+                        </div>
+                    </div>
+                    <div class="select">
+                        <div class="select__header">
+                            <p>Сколько гостей</p>
+                            <div class="select__header__icon"></div>
+                        </div>
+                        <div class="select__body">
+                            <div class="select__body__item"><h3>Взрослые</h3>
+                                <div class="counter">
+                                    <input type="button" id="buttonCountMinus" value="-" />
+                                    <div id="buttonCountNumber"><h3>0</h3></div>
+                                    <input type="button" id="buttonCountPlus" value="+" />
+                                    <input type="hidden" value="0" id="num" name="num" />
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <div class="clear">
+                                    <input type="button" value="Очистить">
+                                </div>
+                                <div class="accept">
+                                    <input type="button" value="Применить">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="js/dropdown.js"></script>
+    </body>
+</html>

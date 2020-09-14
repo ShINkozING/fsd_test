@@ -1,0 +1,61 @@
+%fillButton
+    font-weight: bold
+    font-size: 12px
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 22px
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    border: none
+    font-family: 'Montserrat', sans-serif
+    font-weight: bold
+%nullButton
+    display: block
+    position: relative
+    font-family: 'Montserrat', sans-serif
+    font-weight: bold
+    font-size: 12px
+    text-transform: uppercase
+    color: #BC9CFF
+    text-align: center
+    background-color: #FFFFFF
+    border-radius: 22px
+    border: none
+    &::after
+        content: ''
+        display: block
+        clear: both
+    &::before
+        position: absolute
+        top: -2px
+        bottom: -2px
+        left: -2px
+        right: -2px
+        content: ""
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+        border-radius: 22px
+        z-index: -1
+%textButton
+    position: relative
+    font-family: 'Montserrat', sans-serif
+    color: rgba(31, 32, 65, 0.5)
+    font-size: 12px
+    line-height: 17px
+    background: #FFFFFF
+    border: none
+%acceptButton
+    font-weight: bold
+    font-size: 22px
+    text-transform: uppercase
+%textField
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    width: 100%
+    max-width: 320px
+    height: 44px
+    &:hover
+        border: 1px solid rgba(31, 32, 65, 0.5)
+    &:focus
+        border: 1px solid rgba(31, 32, 65, 0.5)
