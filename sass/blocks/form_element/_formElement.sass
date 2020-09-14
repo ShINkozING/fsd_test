@@ -8,20 +8,30 @@
     flex-direction: column
     justify-content: space-between
     margin-bottom: 20px
-    &__text
+    & label
         display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: center
-        margin-bottom: 0
-        & p 
-            text-transform: uppercase
-            font-size: 12px
-            line-height: 15px
-            text-align: right
-            margin: 0 0 8px 0
-        & h3
-            margin: 0 0 5px 0
+        flex-direction: column
+        color: #1F2041
+        font-size: 12px
+        line-height: 15px
+        font-weight: bold
+        text-transform: uppercase
+        & input
+            margin-top: 5px
+            background: #FFFFFF
+            border: 1px solid rgba(31, 32, 65, 0.25)
+            border-radius: 4px
+            width: 100%
+            height: 44px
+            padding-left: 15px
+            font-size: 14px
+            line-height: 18px
+            &:active
+                border: 1px solid rgba(31, 32, 65, 0.5)
+            &:hover
+                border: 1px solid rgba(31, 32, 65, 0.5)
+            &:focus
+                border: 1px solid rgba(31, 32, 65, 0.5)
 .text-field__default
     display: flex
     margin-top: 0
@@ -33,7 +43,6 @@
         width: 100%
         height: 44px
         padding-left: 15px
-        color: rgba(31, 32, 65, 0.25)
         font-family: Montserrat
         font-style: normal
         font-weight: normal
