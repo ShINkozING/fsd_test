@@ -14,11 +14,22 @@ select();
 //счетчик
 //найти кнопку +
 let buttonPlus = document.querySelector('[data-action="plus"]');
-let counter = document.querySelector(".child");
-let counterInt = parseInt(counter.value, 10);
-//отследить клик по кнопке
-buttonPlus.addEventListener("click", function(){
-    counterInt += 1;
-    console.log(counterInt);
-    counter.value = counterInt;
+let buttonMinus = document.querySelector('[data-action="minus"]')
+
+buttonPlus.addEventListener('click',()=>{
+    let inp = document.querySelector('.first');
+    let num = parseInt(inp.value, 10);
+    if(num <10){
+        num += 1;
+        inp.value = num;
+    }
+});
+
+buttonMinus.addEventListener('click',()=>{
+    let inp = document.querySelector('.first');
+    let num = parseInt(inp.value, 10);
+    if (num > 0){
+        num -= 1;
+        inp.value = num;
+    } 
 });
