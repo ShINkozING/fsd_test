@@ -34,22 +34,22 @@
                             <div class="dropdown__body__item"><span>Взрослые</span>
                                 <div class="counters-wrapper">
                                     <button class="counters-wrapper__button" data-action="minus">-</button>
-                                    <input type="text" class="counters-wrapper__input first" value="0">
+                                    <input type="text" class="counters-wrapper__input" data-counter value="0">
                                     <button class="counters-wrapper__button" data-action="plus">+</button>
                                 </div>
                             </div>
                             <div class="dropdown__body__item"><span>Дети</span>
                                 <div class="counters-wrapper">
-                                    <button class="counters-wrapper__button">-</button>
-                                    <input type="text" class="counters-wrapper__input second" value="0">
-                                    <button class="counters-wrapper__button">+</button>
+                                    <button class="counters-wrapper__button" data-action="minus">-</button>
+                                    <input type="text" class="counters-wrapper__input" data-counter value="0">
+                                    <button class="counters-wrapper__button" data-action="plus">+</button>
                                 </div>
                             </div>
                             <div class="dropdown__body__item"><span>Младенцы</span>
                                 <div class="counters-wrapper">
-                                    <button class="counters-wrapper__button">-</button>
-                                    <input type="text" class="counters-wrapper__input third" value="0">
-                                    <button class="counters-wrapper__button">+</button>
+                                    <button class="counters-wrapper__button" data-action="minus">-</button>
+                                    <input type="text" class="counters-wrapper__input" data-counter value="0">
+                                    <button class="counters-wrapper__button" data-action="plus">+</button>
                                 </div>
                             </div>
                             <div class="buttons">
@@ -59,8 +59,8 @@
                         </div>
                     </div>
                     <div class="text-field">
-                        <label>text field
-                            <input placeholder="Email" value="This pretty awesome" class="text-field__input">
+                        <label>masked text field
+                            <input placeholder="ДД.ММ.ГГ" class="text-field__input">
                         </label>
                     </div>
                 </div>
