@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="sass/main.css">
+        <link rel="stylesheet" href="sass/calendar.css">
     </head>
     <body>
         <section class="FormElement">
@@ -60,24 +61,37 @@
                     </selec>
                     <div class="text-field">
                         <label>masked text field
-                            <input placeholder="ДД.ММ.ГГ">
+                            <input type="text" placeholder="ДД.ММ.ГГ" class="js-date" maxlength="10" />
                         </label>
                     </div>
                     <div class="dateDropdown">
-                        <div class="dateDropdown__fromDate">
+                        <div class="dateDropdown__fromDate date-active">
                             <label>date dropdown</label>
-                            <input type="date" placeholder="" name="" max="" id="fromDate">
+                            <input type="text" placeholder="">
+                            <div id="calendar_container"></div>
                         </div>
                         <div class="dateDropdown__toDate">
                             <label>date dropdown</label>
-                            <input type="date" placeholder="" name="" min="" id="toDate">
+                            <input type="text" placeholder="">
+                            <div id="calendar_container"></div>
                         </div>
+                    </div>
+                    <div class="filter-date">
+                        <label>filter date dropdown</label>
+                        <input type="text"
+                                placeholder="ДД.ММ.ГГ - ДД.ММ.ГГ"
+                                data-range="true"
+                                data-multiple-dates-separator=" - "
+                                data-language="en"
+                                class="datepicker-here"/>
+                        <div class="filter-date__icon"></div>
                     </div>
                 </div>
             </div>
         </section>
         <script src="js/dropdown.js"></script>
         <script src="js/jquery/jquery-3.5.1.min.js"></script>
-        <script src="js/datepicker.js"></script>
+        <script src="js/mask.js"></script>
+        <script src="js/calendar.js"></script>
     </body>
 </html>
