@@ -25,7 +25,7 @@
                             <input placeholder="Email" value="This pretty awesome" class="hover">
                         </label>
                     </div>
-                    <div class="dropdown">
+                    <selec class="dropdown">
                         <div class="dropdown__header">
                             <p>Сколько гостей</p>
                             <div class="dropdown__header__icon"></div>
@@ -57,15 +57,27 @@
                                 <button>Применить</button>
                             </div>
                         </div>
-                    </div>
+                    </selec>
                     <div class="text-field">
                         <label>masked text field
-                            <input placeholder="ДД.ММ.ГГ" class="text-field__input">
+                            <input placeholder="ДД.ММ.ГГ">
                         </label>
+                    </div>
+                    <div class="dateDropdown">
+                        <div class="dateDropdown__fromDate">
+                            <label>date dropdown</label>
+                            <input type="date" placeholder="" name="" max="" id="fromDate">
+                        </div>
+                        <div class="dateDropdown__toDate">
+                            <label>date dropdown</label>
+                            <input type="date" placeholder="" name="" min="" id="toDate">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <script src="js/dropdown.js"></script>
+        <script src="js/jquery/jquery-3.5.1.min.js"></script>
+        <script src="js/datepicker.js"></script>
     </body>
 </html>

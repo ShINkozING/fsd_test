@@ -626,6 +626,87 @@
   outline: none;
 }
 
+.dateDropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 320px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dateDropdown__fromDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dateDropdown__fromDate label {
+  color: #1F2041;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dateDropdown__fromDate input {
+  width: 100%;
+  max-width: 150px;
+  height: 44px;
+  margin-right: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.dateDropdown__fromDate input:focus {
+  outline: none;
+}
+
+.dateDropdown__toDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dateDropdown__toDate label {
+  color: #1F2041;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dateDropdown__toDate input {
+  width: 100%;
+  max-width: 150px;
+  height: 44px;
+  margin-right: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.dateDropdown__toDate input:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: 'Quicksand';
   src: url("../../fonts/quiqcksand/Quicksand-Bold.eot");
